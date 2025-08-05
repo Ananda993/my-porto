@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ananda's Portfolio</title>
+    <title data-lang-key="pageTitle">Portofolio Ananda</title>
     
-    <!-- Favicon using SVG -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+    <!-- Favicon using your logo -->
+    <link rel="icon" href="gusnan.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
     
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,23 +24,42 @@
     <!-- Header -->
     <header class="main-header">
         <div class="container">
-            <a href="#" class="logo">Ananda</a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#profile">Profile</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            <a href="#" class="logo">
+                <img src="gusnan.png" alt="Gusnan Logo">
+            </a>
+            <div class="nav-and-controls">
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#hero" data-lang-key="navHome">Beranda</a></li>
+                        <li><a href="#profile" data-lang-key="navProfile">Profil</a></li>
+                        <li><a href="#projects" data-lang-key="navProjects">Proyek</a></li>
+                        <li><a href="#about" data-lang-key="navAbout">Tentang</a></li>
+                        <li><a href="#contact" data-lang-key="navContact">Kontak</a></li>
+                    </ul>
+                </nav>
+                <div class="controls">
+                    <div class="theme-switcher" id="theme-switcher">
+                        <div class="ball"></div>
+                    </div>
+                    <div class="language-switcher">
+                        <i class="fas fa-globe"></i>
+                        <select id="language-selector">
+                            <option value="id">ID</option>
+                            <option value="en">EN</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section id="hero">
         <div class="hero-content container">
-            <h1>Hi, I'm Ananda Guna</h1>
+            <h1 data-lang-key="heroTitle">Hai, saya Ananda Guna</h1>
             <p class="typing-text"></p>
         </div>
     </section>
@@ -48,13 +67,13 @@
     <!-- Profile Section -->
     <section id="profile">
         <div class="container">
-            <h2>My Profile</h2>
+            <h2 data-lang-key="profileTitle">Profil Saya</h2>
             <div class="profile-content">
                 <img src="https://i.pinimg.com/236x/75/f0/f6/75f0f6b7dd94dbd496b5a49f7c534862.jpg" alt="Profile Picture" class="profile-image" onerror="this.onerror=null;this.src='https://placehold.co/280x280/6a11cb/ffffff?text=Ananda';">
                 <div class="profile-text">
-                    <h3>Front-End Developer & Student</h3>
-                    <p>
-                       I'm a 3rd-semester Informatics student at UHN Sugriwa Denpasar who's still learning and exploring the world of Front-End Web Development. Although I'm still a beginner, I’m passionate about designing simple, responsive websites and enjoy experimenting with new technologies. In my spare time, I like cycling, reading comics, and picking up new skills little by little to improve myself. 😊
+                    <h3 data-lang-key="profileSubTitle">Front-End Developer & Mahasiswa</h3>
+                    <p data-lang-key="profileDesc">
+                       Saya seorang mahasiswa Informatika semester 3 di UHN Sugriwa Denpasar yang masih belajar dan mendalami dunia Front-End Web Development. Meskipun masih pemula, saya bersemangat dalam merancang website yang simpel, responsif, dan suka bereksperimen dengan teknologi baru. Di waktu luang, saya suka bersepeda, membaca komik, dan sedikit demi sedikit mempelajari hal baru untuk meningkatkan kemampuan diri. 😊
                     </p>
                 </div>
             </div>
@@ -64,38 +83,71 @@
     <!-- Projects Section -->
     <section id="projects" class="alternate-bg">
         <div class="container">
-            <h2>My Projects</h2>
+            <h2 data-lang-key="projectsTitle">Proyek Saya</h2>
             <div class="projects-grid">
                 <!-- Project 1 -->
                 <div class="project-card">
                     <div class="project-card-content">
-                        <h3>MathMitshu</h3>
-                        <p>An interactive and fun math learning website for kids, featuring an AI assistant to help with problems.</p>
-                        <a href="https://mathmitshu.netlify.app/" target="_blank" class="project-link">View Project</a>
+                        <h3 data-lang-key="project1Title">MathMitshu</h3>
+                        <p data-lang-key="project1Desc">Website pembelajaran matematika yang interaktif dan menyenangkan untuk anak-anak, dilengkapi dengan asisten AI untuk membantu mengerjakan soal.</p>
+                        <div class="project-tech-icons">
+                            <i class="fab fa-html5" title="HTML5"></i>
+                            <i class="fab fa-css3-alt" title="CSS3"></i>
+                            <i class="fab fa-js-square" title="JavaScript"></i>
+                        </div>
+                        <a href="https://mathmitshu.netlify.app/" target="_blank" class="project-link" data-lang-key="viewProject">Lihat Proyek</a>
                     </div>
                 </div>
                 <!-- Project 2 -->
                 <div class="project-card">
                     <div class="project-card-content">
-                        <h3>Waifuku Chatbot</h3>
-                        <p>A chatbot featuring Mitsuha from the anime "Kimi No Nawa," allowing users to interact with their favorite character.</p>
-                        <a href="https://waifuku.netlify.app/" target="_blank" class="project-link">View Project</a>
+                        <h3 data-lang-key="project2Title">Waifuku Chatbot</h3>
+                        <p data-lang-key="project2Desc">Chatbot dengan karakter Mitsuha dari anime "Kimi No Nawa," memungkinkan pengguna untuk berinteraksi dengan karakter favorit mereka.</p>
+                        <div class="project-tech-icons">
+                             <i class="fab fa-html5" title="HTML5"></i>
+                            <i class="fab fa-css3-alt" title="CSS3"></i>
+                            <i class="fab fa-js-square" title="JavaScript"></i>
+                        </div>
+                        <a href="https://waifuku.netlify.app/" target="_blank" class="project-link" data-lang-key="viewProject">Lihat Proyek</a>
                     </div>
                 </div>
                 <!-- Project 3 -->
                 <div class="project-card">
                     <div class="project-card-content">
-                        <h3>ByteNova Class Site</h3>
-                        <p>The official website for the ByteNova Informatics class of 2024 at UHN I Gusti Bagus Sugriwa Denpasar.</p>
-                        <a href="https://bytenovaclass.netlify.app/" target="_blank" class="project-link">View Project</a>
+                        <h3 data-lang-key="project3Title">Situs Kelas ByteNova</h3>
+                        <p data-lang-key="project3Desc">Situs resmi untuk kelas Informatika ByteNova angkatan 2024 di UHN I Gusti Bagus Sugriwa Denpasar.</p>
+                         <div class="project-tech-icons">
+                             <i class="fab fa-html5" title="HTML5"></i>
+                            <i class="fab fa-css3-alt" title="CSS3"></i>
+                            <i class="fab fa-js-square" title="JavaScript"></i>
+                        </div>
+                        <a href="https://bytenovaclass.netlify.app/" target="_blank" class="project-link" data-lang-key="viewProject">Lihat Proyek</a>
                     </div>
                 </div>
                 <!-- Project 4 -->
                 <div class="project-card">
                     <div class="project-card-content">
-                        <h3>OS Recommendation Blog</h3>
-                        <p>A blog dedicated to providing recommendations and reviews for various operating systems to help users choose the best one.</p>
-                        <a href="https://mitsuhaa-blog.netlify.app/" target="_blank" class="project-link">View Project</a>
+                        <h3 data-lang-key="project4Title">Blog Rekomendasi OS</h3>
+                        <p data-lang-key="project4Desc">Blog yang didedikasikan untuk memberikan rekomendasi dan ulasan berbagai sistem operasi untuk membantu pengguna memilih yang terbaik.</p>
+                         <div class="project-tech-icons">
+                             <i class="fab fa-html5" title="HTML5"></i>
+                            <i class="fab fa-css3-alt" title="CSS3"></i>
+                            <i class="fab fa-js-square" title="JavaScript"></i>
+                        </div>
+                        <a href="https://mitsuhaa-blog.netlify.app/" target="_blank" class="project-link" data-lang-key="viewProject">Lihat Proyek</a>
+                    </div>
+                </div>
+                 <!-- NEW Project 5 -->
+                <div class="project-card">
+                    <div class="project-card-content">
+                        <h3 data-lang-key="project5Title">Mitshu Audiovisualizer</h3>
+                        <p data-lang-key="project5Desc">Visualizer audio berbasis web yang merespons musik atau input mikrofon secara real-time dengan efek visual yang dinamis.</p>
+                         <div class="project-tech-icons">
+                             <i class="fab fa-html5" title="HTML5"></i>
+                            <i class="fab fa-css3-alt" title="CSS3"></i>
+                            <i class="fab fa-js-square" title="JavaScript"></i>
+                        </div>
+                        <a href="https://mitshu-audiovisual.netlify.app/" target="_blank" class="project-link" data-lang-key="viewProject">Lihat Proyek</a>
                     </div>
                 </div>
             </div>
@@ -105,11 +157,11 @@
     <!-- About Me / Skills Section -->
     <section id="about">
         <div class="container">
-            <h2>About Me & Skills</h2>
+            <h2 data-lang-key="aboutTitle">Tentang Saya & Keahlian</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Passionate Learner & Creator</h3>
-                    <p>As a developer, I thrive on bringing ideas to life through code. I'm skilled in various web technologies and always eager to expand my knowledge. My goal is to create web experiences that are not only functional but also intuitive and enjoyable for everyone.</p>
+                    <h3 data-lang-key="aboutSubTitle">Pembelajar & Kreator yang Penuh Semangat</h3>
+                    <p data-lang-key="aboutDesc">Sebagai seorang developer, saya berkembang dengan mewujudkan ide melalui kode. Saya terampil dalam berbagai teknologi web dan selalu bersemangat untuk memperluas pengetahuan saya. Tujuan saya adalah menciptakan pengalaman web yang tidak hanya fungsional tetapi juga intuitif dan menyenangkan bagi semua orang.</p>
                 </div>
                 <div class="skills-grid">
                     <div class="skill-item">
@@ -136,11 +188,11 @@
     <!-- Contact Section -->
     <section id="contact" class="alternate-bg">
         <div class="container">
-            <h2>Get In Touch</h2>
+            <h2 data-lang-key="contactTitle">Hubungi Saya</h2>
             <div class="contact-content">
-                <p>Have a question or want to work together? Feel free to send me a message on WhatsApp!</p>
+                <p data-lang-key="contactDesc">Punya pertanyaan atau ingin bekerja sama? Jangan ragu untuk mengirimi saya pesan di WhatsApp!</p>
                 <a href="https://wa.me/6285137781891" target="_blank" class="btn-contact">
-                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    <i class="fab fa-whatsapp"></i> <span data-lang-key="contactButton">Chat di WhatsApp</span>
                 </a>
             </div>
         </div>
@@ -154,7 +206,7 @@
                 <a href="https://github.com/anandaguna" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://x.com/" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
-            <p>&copy; 2024 | Designed & Built by I Putu Agus Ananda Guna Prasetya</p>
+            <p data-lang-key="footerText">&copy; 2024 | Dirancang & Dibuat oleh I Putu Agus Ananda Guna Prasetya</p>
         </div>
     </footer>
 
